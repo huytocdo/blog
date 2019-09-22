@@ -17,23 +17,25 @@
       </div>
       <div v-html="post.html"></div>
     </main>
-    <posts-related :posts="posts"></posts-related>
+    <posts-related :posts="post.related"></posts-related>
   </div>
 </template>
 
 <script>
 import PostsRelated from '~/components/posts-related.vue'
-import { posts } from '~/samplePost.json'
+// import { posts } from '~/samplePost.json'
 
 export default {
   components: {
     PostsRelated
   },
-  data() {
-    return {
-      post: posts[0],
-      posts
-    }
+  async asyncData({ $axios, params }) {
+    const {
+      data: { data: post }
+    } = await $axios.$get(
+      `http://127.0.0.1:8000/api/v1/posts/slug/${params.slug}`
+    )
+    return { post: post[0] }
   }
 }
 </script>

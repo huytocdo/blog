@@ -10,16 +10,16 @@
 </template>
 <script>
 import PostShort from '~/components/post-short.vue'
-import { posts } from '~/samplePost.json'
 export default {
   layout: 'fullTitle',
   components: {
     PostShort
   },
-  data: () => {
-    return {
-      posts
-    }
+  async asyncData({ $axios }) {
+    const {
+      data: { data: posts }
+    } = await $axios.$get('http://127.0.0.1:8000/api/v1/posts')
+    return { posts }
   }
 }
 </script>

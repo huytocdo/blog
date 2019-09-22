@@ -23,7 +23,7 @@
               <span class="icon"><i class="far fa-comment"></i></span>
               <span>1 bình luận</span>
             </div> -->
-        <template v-for="tag in post.tags">
+        <template v-for="tag in post.categories">
           <nuxt-link :key="tag._id" :to="`/tag/${tag.slug}`" class="info__tag">
             {{ `#${tag.name}` }}
           </nuxt-link>
