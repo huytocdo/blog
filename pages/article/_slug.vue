@@ -32,9 +32,7 @@ export default {
   async asyncData({ $axios, params }) {
     const {
       data: { data: post }
-    } = await $axios.$get(
-      `http://127.0.0.1:8000/api/v1/posts/slug/${params.slug}`
-    )
+    } = await $axios.$get(`/posts/slug/${params.slug}`)
     return { post: post[0] }
   }
 }

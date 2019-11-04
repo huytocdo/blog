@@ -1,3 +1,4 @@
+require('dotenv').config()
 module.exports = {
   mode: 'universal',
   /*
@@ -51,7 +52,9 @@ module.exports = {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    baseURL: process.env.API_URL
+  },
   /*
    ** Build configuration
    */
@@ -76,6 +79,7 @@ module.exports = {
       }
     }
   },
+  buildModules: ['@nuxtjs/dotenv'],
   server: {
     port: 3001
   }
