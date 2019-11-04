@@ -33,8 +33,8 @@ export default {
   },
   async asyncData({ $axios, params }) {
     const promiseArr = [
-      $axios.$get(`http://127.0.0.1:8000/api/v1/posts/category/${params.slug}`),
-      $axios.$get(`http://127.0.0.1:8000/api/v1/categories`)
+      $axios.$get(`/posts/category/${params.slug}`),
+      $axios.$get(`/categories`)
     ]
     const [
       {
