@@ -1,4 +1,5 @@
 require('dotenv').config()
+const envConfig = require(`./config/${process.env.NODE_ENV}`)
 module.exports = {
   mode: 'universal',
   /*
@@ -33,7 +34,10 @@ module.exports = {
   /*
    ** Plugins to load before mounting the App
    */
-  // plugins: ['@/plugins/antd-ui'], // REMOVE ANT DESIGN
+  plugins: [
+    // '@/plugins/antd-ui',
+    process.env.NODE_ENV !== 'production' ? '~/plugins/axios' : ''
+  ], // REMOVE ANT DESIGN
   /*
    ** Nuxt.js dev-modules
    */
@@ -53,7 +57,7 @@ module.exports = {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL: process.env.API_URL
+    baseURL: envConfig.API_URL
   },
   /*
    ** Build configuration
