@@ -89,11 +89,7 @@ body {
   margin: 4rem auto;
   text-align: center; }
   .header .logo-top {
-    height: 100px;
-    width: auto;
-    border-radius: 50%;
-    border-color: #777;
-    background-color: #777; }
+    height: 100px; }
   .header .top-nav {
     margin: 2rem auto; }
     .header .top-nav > ul > li.top-nav__item {

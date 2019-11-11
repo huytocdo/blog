@@ -1,9 +1,9 @@
 <template>
   <header class="container header">
     <nuxt-link to="/">
-      <img class="logo-top" src="/img/logo-front.jpg" alt="Logo" />
+      <img class="logo-top" src="/img/logo-600w.png" alt="Logo" />
     </nuxt-link>
-    <h1 v-if="showTitle" class="heading-primary">211</h1>
+    <!-- <h1 v-if="showTitle" class="heading-primary">211</h1> -->
     <!-- <h2 v-if="showSubtitle" class="long-paragraph">
       Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ducimus
       molestiae id mollitia eius aspernatur pariatur voluptate, quo, tempora
