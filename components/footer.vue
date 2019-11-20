@@ -1,13 +1,13 @@
 <template>
   <footer class="container footer">
-    <nav class="bot-nav">
+    <!-- <nav class="bot-nav">
       <ul>
         <li class="bot-nav__item"><nuxt-link to="/about">Về tui</nuxt-link></li>
-        <!-- <li class="bot-nav__item"><a href="#">Dữ liệu</a></li>
+        <li class="bot-nav__item"><a href="#">Dữ liệu</a></li>
         <li class="bot-nav__item"><a href="#">Hảo hữu</a></li>
-        <li class="bot-nav__item"><a href="#">Theo dõi</a></li> -->
+        <li class="bot-nav__item"><a href="#">Theo dõi</a></li>
       </ul>
-    </nav>
+    </nav> -->
     <div class="copy">
       Blog này được xây dựng bởi <a href="#">huytocdo</a> with
       <i class="fas fa-heart"></i>

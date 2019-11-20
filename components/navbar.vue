@@ -25,6 +25,12 @@
             ><span class="icon"><i class="fas fa-code"></i></span>Tất cả chủ đề
           </nuxt-link>
         </li>
+        <li class="top-nav__item">
+          <nuxt-link to="/tag"
+            ><span class="icon"><i class="fab fa-connectdevelop"></i></span>
+            Về tui
+          </nuxt-link>
+        </li>
         <!-- <li class="top-nav__item">
           <span class="icon"><i class="fas fa-link"></i></span>
           <a href="#">Blog hay</a>
