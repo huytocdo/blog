@@ -15,7 +15,8 @@
           </nuxt-link>
         </template>
       </div>
-      <div v-html="post.html"></div>
+      <div class="medium-editor-container" v-html="post.html"></div>
+      <!-- <div v-html="post.html"></div> -->
     </main>
     <posts-related :posts="post.related"></posts-related>
   </div>
@@ -23,11 +24,52 @@
 
 <script>
 import PostsRelated from '~/components/posts-related.vue'
-// import { posts } from '~/samplePost.json'
 
 export default {
   components: {
     PostsRelated
+  },
+  head() {
+    return {
+      title: `Coder211 - ${this.post.title}`,
+      meta: [
+        {
+          hid: 'title',
+          name: 'title',
+          content: `Coder211.com - ${this.post.title}`
+        },
+        {
+          hid: 'description',
+          name: 'description',
+          content: `Trang chia sẽ kiến thức lập trình về Front-end, Back-end, Full-stack, Web Developer, đặc biệt là các ngôn ngữ HTML5, CSS, Javascript.`
+        },
+        {
+          hid: 'keywords',
+          name: 'keywords',
+          content:
+            'code, lap trinh web, web developer, lap trinh, lập trình, HTML5, CSS, Javascript, Frontend, Front-end, Back-end, Backend, Full-stack, fullstack'
+        },
+        {
+          property: 'og:url',
+          content: `${process.env.SITE_URL}${this.$route.path}`
+        },
+        { property: 'og:type', content: `website` },
+        {
+          property: 'og:title',
+          content: `Coder211.com - Tổng hợp chuyên mục`
+        },
+        {
+          property: 'og:description',
+          content: `Trang chia sẽ kiến thức lập trình về Front-end, Back-end, Full-stack, Web Developer, đặc biệt là các ngôn ngữ HTML5, CSS, Javascript.`
+        },
+        {
+          property: 'og:image',
+          content: `${process.env.SITE_URL}/img/logo-thumbnail.jpg`
+        },
+        { property: 'og:image:width', content: '1200' },
+        { property: 'og:image:height', content: '630' }
+      ]
+    }
   },
   async asyncData({ $axios, params }) {
     const {
