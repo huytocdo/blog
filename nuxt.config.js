@@ -1,8 +1,10 @@
 const envConfig = require(`./config/${process.env.NODE_ENV}`)
+const _ = require('lodash')
 const plugins = []
 if (process.env.NODE_ENV !== 'production') {
   plugins.push('~/plugins/axios')
 }
+_.assignIn(process.env, envConfig)
 module.exports = {
   mode: 'universal',
   /*
@@ -48,9 +50,12 @@ module.exports = {
    ** Global CSS
    */
   css: [
-    'static/style.css',
     'static/font/font-awesome/css/all.min.css',
-    'static/font/lato/font.css'
+    'static/font/font.css',
+    'static/vendor/medium.css',
+    'static/vendor/medium.custom.css',
+    'static/vendor/gist.css',
+    'static/style.css'
   ], // REMOVE ANT DESIGN
   // css: ['ant-design-vue/dist/antd.css'], // REMOVE ANT DESIGN
   /*
