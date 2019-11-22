@@ -27,9 +27,9 @@
         </li>
         <li class="top-nav__item">
           <nuxt-link to="/about"
-            ><span class="icon"><i class="fab fa-connectdevelop"></i></span>
-            Về tui
-          </nuxt-link>
+            ><span class="icon"><i class="fab fa-connectdevelop"></i></span>Về
+            tui</nuxt-link
+          >
         </li>
         <!-- <li class="top-nav__item">
           <span class="icon"><i class="fas fa-link"></i></span>
